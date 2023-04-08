@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+    <div class="container container">
+    
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse navbar1" id="navbarNavDropdown">
+        <ul class="navbar-nav navbarul">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html"><i class="fa-solid fa-plane"></i> Find flights </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-solid fa-bed"></i> Find stays </a>
+          </li>  </ul>
+          <ul class="navbar-nav navbarul">
+           <a class="navbar-brand mainlogo" href="#"> <img src="images/logo.png" alt=""> </a> 
+          </ul>
+          <ul class="navbar-nav navbarul"> 
+          <li class="nav-item">
+            <a class="nav-link" href="#">Log in</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link signin" href="#">Sign up</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+
+  <div class="dropdowns">
+    <div class="mydropdown1">
+      <p class="current11"> From-To </p>
+      <button class="current1"> From - To </button>
+  
+      <ul class="droplist1">
+          <li>Lahore - Karachi</li>
+          <li> Kutaisi - Munich </li>
+          <li> Kutaisi - Madrid </li>
+          <li> Kutaisi - Ankara </li>
+          <li> Kutaisi - London </li>
+      </ul>
+  
+  </div>
+  <div class="mydropdown2">
+    <p class="current11"> Trip</p>
+    <button class="current2"> Room and guests </button>
+
+    <ul class="droplist2">
+        <li> 1 Room, 2 Adults </li>
+        <li> 2 Room, 2 Adults </li>
+        <li> 1 Room, 3 Adults </li>
+        <li> 2 Room, 3 Adults </li>
+        <li> 3 Room, 5 Adults </li>
+    </ul>
+
+</div>
+
+<div class="mydropdown3">
+  <p class="current11"> Depart-Return </p>
+  <button class="current3"> Depart - Return</button>
+
+  <ul class="droplist3">
+      <li> 07 Nov 23 - 13 Nov 23 </li>
+      <li> 09 Dec 23 - 16 Dec 23 </li>
+      <li> 11 Sep 23 - 19 Sep 23 </li>
+      <li> 05 Dec 23 - 16 Feb 23 </li>
+      <li> 03 Mar 23 - 10 Mar 23 </li>
+  </ul>
+
+</div>
+
+
+<div class="mydropdown4">
+<p class="current11"> Passenger - class </p>
+<button class="current4"> Passenger - class</button>
+
+<ul class="droplist4">
+    <li> Economy </li>    
+    <li> Economy 2 </li>
+    <li> Premium Economy  </li>
+    <li> Business  </li>
+    <li> First Class  </li>
+
+</ul>
+
+</div>
+
+</div>
+    
+
+
+     <div class="ceter">
+<div class="CenterLeftMain">
+  <h2>Filters</h2>
+  <div class="leftContainer">
+  <div class="pirceDiv" >
+    <p>Price</p>
+    <button id="DropDown" onclick="toggleBtn()" > <i class="fa-solid fa-chevron-down" ></i> </button> 
+  </div>
+  
+  <div class="wrapper" id="wrapper">
+      
+    <div class="price-input">
+
+    </div>
+    <div class="slider">
+      <div class="progress"></div>
+    </div>
+    <div class="range-input">
+      <input type="range" class="range-min" min="0" max="1200" value="0" step="5">
+      <input type="range" class="range-max" min="0" max="1200" value="1200" step="5">
+    </div> 
+    <div class="price-input">
+      <div class="field">
+        <input type="text" class="input-min" value="$0" disabled>
+        
+      </div>
+      <div class="field">
+        <input type="text" class="input-max" value="$1200" disabled>
+        
+        
+      </div>
+    </div>
+  </div>
+ 
+
+  <div class="wrapperino" id="wrapperino">
+      
+    <div class="price-input">
+
+    </div>
+    <div class="slider">
+      <div class="progress"></div>
+    </div>
+    <div class="range-input">
+      <input type="range" class="range-min" min="0" max="1200" value="$0" step="5">
+      <input type="range" class="range-max" min="0" max="1200" value="$1200" step="5">
+    </div> 
+    <div class="price-input">
+      <div class="field">
+        <input type="text" class="input-min" value="$0" disabled>
+        
+      </div>
+      <div class="field">
+        <input type="text" class="input-max" value="$1200" disabled>
+        
+        
+      </div>
+    </div>
+  </div> 
+  <div class="spanDiv"></div> 
+
+  <div class="ratingMain">
+    <p>Rating</p>
+    <button id="ArrDown" onclick="toggleKkk()" > <i class="fa-solid fa-chevron-down" ></i> </button> 
+  </div>
+  <div class="rating" id="rating">
+    <button class="btn" data-rating="0">0+</button>
+    <button class="btn" data-rating="1">1+</button>
+    <button class="btn" data-rating="2">2+</button>
+    <button class="btn" data-rating="3">3+</button>
+    <button class="btn" data-rating="4">4+</button>
+  </div>
+  <div class="spanDiv"></div> 
+  
+
+<div class="airlineMain">
+<p>Airlines</p>
+<button id="airDown" onclick="togglelll()" > <i class="fa-solid fa-chevron-down" ></i> </button> 
+</div>
+<div class="airlane" >
+<div class="airlaneDiv" id="airlaneDiv">
+ <div class="arilanediv1">
+  <input type="checkbox" name="" id="">
+  <p>Emirated</p>
+ </div>
+  
+<div class="arilanediv1">
+  <input type="checkbox" name="" id="">
+  <p>Fly Dubai</p>
+</div>
+
+<div class="arilanediv1">
+<input type="checkbox" name="" id="">
+  <p>Qatar</p>
+</div>
+  
+<div class="arilanediv1">
+ <input type="checkbox" name="" id="">
+  <p>Etihad</p>
+</div>
+ 
+</div>
+</div>
+<div class="spanDiv"></div> 
+<div class="Maintrips">
+  <p>Trips</p>
+  <button id="tripDown" onclick="toggleTog()" > <i class="fa-solid fa-chevron-down" ></i> </button> 
+</div>  
+<div class="Trips" >
+  <div class="TripsDiv" id="TripsDiv">
+   <div class="Trips1">
+    <input type="checkbox" name="" id="">
+    <p>Round trip</p>
+   </div>
+    
+  <div class="Trips1">
+    <input type="checkbox" name="" id="">
+    <p>On Way</p>
+  </div>
+  
+  <div class="Trips1">
+  <input type="checkbox" name="" id="">
+    <p>Multi-City</p>
+  </div>
+    
+  <div class="Trips1">
+   <input type="checkbox" name="" id="">
+    <p>My Dates Are Flexible</p>
+  </div>
+   
+  </div>
+  </div>
+</div>
+
+</div>
+
+<div class="rightside-center">
+  <div class="rightside-sections">
+    <div class="Cheapest">
+      <h4>Cheapest</h4>
+      <p>$99. 2h 18m</p>
+    </div>
+    <span class="centerRightSpans"></span>
+    <div class="Best">
+      <h4>Best</h4>
+      <p>$99. 2h 18m</p>
+    </div>
+    <span class="centerRightSpans"></span>
+    <div class="Quickest">
+      <h4>Quickest</h4>
+      <p>$99. 2h 18m</p>
+    </div>
+    <span class="centerRightSpans"></span>
+    <div class="other">
+      <i class="fa-solid fa-bars"></i>
+      <h4>Other sort</h4>
+    </div>
+  </div>
+  <div class="othercontainer">
+    <div class="otherSort">
+      <p>Showing 4 of <span>257 places</span> </p>
+    </div>
+    <select name="pop" id="pop">
+      <option value="item">Sort by Recommended</option>
+      <option value="item2">item2</option>
+      <option value="item3">item3</option>
+      <option value="item4">item4</option>
+  </select>
+  </div>
+  <div class="ragacFrenebisReisebi">
+    <div class="containerFrenebi">
+      <img src="images/image 40.png" alt="">
+      <div class="mainframe">
+<div class="frame">
+    <button>4.2</button>
+    <p>Very Good <span class="l">54 reviews </span> </p>
+    <p class="starting"> starting from <span>$104</span></p>
+  </div>
+  <div class="frame2">
+    <input type="checkbox" name="" id="">
+    <p>12:00 pm - 01:28 pm <span>Emirates</span></p> 
+    <p>non stop</p>
+    <p>2h 28m <span>EWR-BNA</span></p>
+  </div>
+  <div class="frame2">
+    <input type="checkbox" name="" id="">
+    <p>12:00 pm - 01:28 pm <span>Emirates</span></p> 
+    <p>non stop</p>
+    <p>2h 28m <span>EWR-BNA</span></p>
+  </div>
+  <div class="spannnnn"></div>
+  <div class="viewdetails">
+    <button class="heart"><i class="guli fa-regular fa-heart"></i></button>
+    <button> <a href="emirates.html" class="a">View Deals </a> </button>
+  </div>
+  </div>
+  </div>
+  <div class="containerFrenebi">
+    <img src="images/image 41.png" alt="">
+    <div class="mainframe">
+<div class="frame">
+  <button>4.2</button>
+  <p>Very Good <span class="l">54 reviews </span> </p>
+  <p class="starting"> starting from <span>$104</span></p>
+</div>
+<div class="frame2">
+  <input type="checkbox" name="" id="">
+  <p>12:00 pm - 01:28 pm <span>Emirates</span></p> 
+  <p>non stop</p>
+  <p>2h 28m <span>EWR-BNA</span></p>
+</div>
+<div class="frame2">
+  <input type="checkbox" name="" id="">
+  <p>12:00 pm - 01:28 pm <span>Emirates</span></p> 
+  <p>non stop</p>
+  <p>2h 28m <span>EWR-BNA</span></p>
+</div>
+<div class="spannnnn"></div>
+<div class="viewdetails">
+  <button class="heart"><i class="fa-regular fa-heart"></i></button>
+  <button> <a href="dubai.html" class="a">View Deals </a> </button>
+</div>
+</div>
+</div>
+<div class="containerFrenebi">
+  <img src="images/image 43.png" alt="">
+  <div class="mainframe">
+<div class="frame">
+<button>4.2</button>
+<p>Very Good <span class="l">54 reviews </span> </p>
+<p class="starting"> starting from <span>$104</span></p>
+</div>
+<div class="frame2">
+<input type="checkbox" name="" id="">
+<p>12:00 pm - 01:28 pm <span>Emirates</span></p> 
+<p>non stop</p>
+<p>2h 28m <span>EWR-BNA</span></p>
+</div>
+<div class="frame2">
+<input type="checkbox" name="" id="">
+<p>12:00 pm - 01:28 pm <span>Emirates</span></p> 
+<p>non stop</p>
+<p>2h 28m <span>EWR-BNA</span></p>
+</div>
+<div class="spannnnn"></div>
+<div class="viewdetails">
+<button class="heart"><i class="fa-regular fa-heart"></i></button>
+<button> <a href="qatar.html" class="a">View Deals </a> </button>
+</div>
+</div>
+</div>
+<div class="containerFrenebi">
+<img src="images/image 45.png" alt="">
+<div class="mainframe">
+<div class="frame">
+<button>4.2</button>
+<p>Very Good <span class="l">54 reviews </span> </p>
+<p class="starting"> starting from <span>$104</span></p>
+</div>
+<div class="frame2">
+<input type="checkbox" name="" id="">
+<p>12:00 pm - 01:28 pm <span>Emirates</span></p> 
+<p>non stop</p>
+<p>2h 28m <span>EWR-BNA</span></p>
+</div>
+<div class="frame2">
+<input type="checkbox" name="" id="">
+<p>12:00 pm - 01:28 pm <span>Emirates</span></p> 
+<p>non stop</p>
+<p>2h 28m <span>EWR-BNA</span></p>
+</div>
+<div class="spannnnn"></div>
+<div class="viewdetails">
+<button class="heart"><i class="fa-regular fa-heart"></i></button>
+<button> <a href="ethad.html" class="a">View Deals </a> </button>
+</div>
+</div>
+</div>
+
+
+<div class="box">
+  <div class="containerFrenebi">
+    <img src="images/image 40.png" alt="">
+    <div class="mainframe">
+    <div class="frame">
+    <button>4.2</button>
+    <p>Very Good <span class="l">54 reviews </span> </p>
+    <p class="starting"> starting from <span>$104</span></p>
+    </div>
+    <div class="frame2">
+    <input type="checkbox" name="" id="">
+    <p>12:00 pm - 01:28 pm <span>Emirates</span></p> 
+    <p>non stop</p>
+    <p>2h 28m <span>EWR-BNA</span></p>
+    </div>
+    <div class="frame2">
+    <input type="checkbox" name="" id="">
+    <p>12:00 pm - 01:28 pm <span>Emirates</span></p> 
+    <p>non stop</p>
+    <p>2h 28m <span>EWR-BNA</span></p>
+    </div>
+    <div class="spannnnn"></div>
+    <div class="viewdetails">
+    <button class="heart"><i class="fa-regular fa-heart"></i></button>
+    <button> <a href="emirates.html" class="a">View Deals </a> </button>
+    </div>
+    </div>
+    </div>
+    <div class="containerFrenebi">
+      <img src="images/image 43.png" alt="">
+      <div class="mainframe">
+      <div class="frame">
+      <button>4.2</button>
+      <p>Very Good <span class="l">54 reviews </span> </p>
+      <p class="starting"> starting from <span>$104</span></p>
+      </div>
+      <div class="frame2">
+      <input type="checkbox" name="" id="">
+      <p>12:00 pm - 01:28 pm <span>Emirates</span></p> 
+      <p>non stop</p>
+      <p>2h 28m <span>EWR-BNA</span></p>
+      </div>
+      <div class="frame2">
+      <input type="checkbox" name="" id="">
+      <p>12:00 pm - 01:28 pm <span>Emirates</span></p> 
+      <p>non stop</p>
+      <p>2h 28m <span>EWR-BNA</span></p>
+      </div>
+      <div class="spannnnn"></div>
+      <div class="viewdetails">
+      <button class="heart"><i class="fa-regular fa-heart"></i></button>
+      <button> <a href="dubai.html" class="a">View Deals </a> </button>
+      </div>
+      </div>
+      </div>
+      <div class="containerFrenebi">
+        <img src="images/image 41.png" alt="">
+        <div class="mainframe">
+        <div class="frame">
+        <button>4.2</button>
+        <p>Very Good <span class="l">54 reviews </span> </p>
+        <p class="starting"> starting from <span>$104</span></p>
+        </div>
+        <div class="frame2">
+        <input type="checkbox" name="" id="">
+        <p>12:00 pm - 01:28 pm <span>Emirates</span></p> 
+        <p>non stop</p>
+        <p>2h 28m <span>EWR-BNA</span></p>
+        </div>
+        <div class="frame2">
+        <input type="checkbox" name="" id="">
+        <p>12:00 pm - 01:28 pm <span>Emirates</span></p> 
+        <p>non stop</p>
+        <p>2h 28m <span>EWR-BNA</span></p>
+        </div>
+        <div class="spannnnn"></div>
+        <div class="viewdetails">
+        <button class="heart"><i class="fa-regular fa-heart"></i></button>
+        <button> <a href="qatar.html" class="a">View Deals </a> </button>
+        </div>
+        </div>
+        </div>
+        <div class="containerFrenebi">
+          <img src="images/image 45.png" alt="">
+          <div class="mainframe">
+          <div class="frame">
+          <button>4.2</button>
+          <p>Very Good <span class="l">54 reviews </span> </p>
+          <p class="starting"> starting from <span>$104</span></p>
+          </div>
+          <div class="frame2">
+          <input type="checkbox" name="" id="">
+          <p>12:00 pm - 01:28 pm <span>Emirates</span></p> 
+          <p>non stop</p>
+          <p>2h 28m <span>EWR-BNA</span></p>
+          </div>
+          <div class="frame2">
+          <input type="checkbox" name="" id="">
+          <p>12:00 pm - 01:28 pm <span>Emirates</span></p> 
+          <p>non stop</p>
+          <p>2h 28m <span>EWR-BNA</span></p>
+          </div>
+          <div class="spannnnn"></div>
+          <div class="viewdetails">
+          <button class="heart"><i class="fa-regular fa-heart"></i></button>
+          <button> <a href="ethad.html" class="a">View Deals </a> </button>
+          </div>
+          </div>
+          </div>
+</div>
+<button class="showMore" id="showmore">Show more results</button>
+</div>
+  </div>
+
+</div>
+
+
+
+<div class="last-cont">
+  <div class="text33">
+  <h1>Subscribe Newsletter</h1>
+  <h5>The Travel</h5>
+  <p>Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
+  <input type="text" id="search" placeholder="Your Email Address">
+  <label for="search"> <a href=""> Subscribe </a> </label>
+  </div>
+  <div class="icon-div1">
+    <img src="img11/emojione-v1_open-mailbox-with-lowered-flag.png" alt="">
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="footer">
+  <div class="lists">
+  <div class="links">
+    <div class="icon-img">
+    <img src="img12/Group (1).png" alt="">
+  </div>
+    <div class="icons">
+      <img src="img13/Vector (4).png" alt="">
+      <img src="img14/Vector (5).png" alt="">
+      <img src="img15/Vector (6).png" alt="">
+      <img src="img16/Vector (7).png" alt="">
+    </div>
+  </div>
+  <div class="last-one">
+    <div class="list1">
+      <ul>
+        <li> <h5>Our Destinations</h5> </li>
+        <li> <a href=""> Canada </a> </li>
+        <li> <a href=""> Alaksa </a> </li>
+        <li> <a href=""> France </a> </li>
+        <li>  <a href=""> Iceland </a></li>
+      </ul>
+    </div>
+    <div class="list1">
+      <ul>
+        <li> <h5>Our Activities</h5> </li>
+        <li> <a href="">Northern Lights</a> </li>
+        <li> <a href="">Cruising & sailing</a> </li>
+        <li> <a href="">Multi-activities</a> </li>
+        <li> <a href=""> Kayaing </a> </li>
+      </ul>
+    </div>
+    <div class="list1">
+      <ul>
+        <li> <h5> Travel Blogs </h5> </li>
+        <li> <a href=""> Bali Travel Guide </a> </li>
+        <li> <a href=""> Sri Lanks Travel Guide </a> </li>
+        <li> <a href=""> Peru Travel Guide </a> </li>
+        <li> <a href=""> Bali Travel Guide </a> </li>
+      </ul>
+    </div>
+    <div class="list1">
+      <ul>
+        <li> <h5> About Us </h5> </li>
+        <li> <a href=""> Our Story </a> </li>
+        <li> <a href=""> Work with us </a> </li>
+      </ul>
+    </div>
+    <div class="list1">
+      <ul>
+        <li> <h5> Contact Us </h5> </li>
+        <li> <a href=""> Our Story </a> </li>
+        <li> <a href=""> Work with us </a> </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+ 
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="java.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
